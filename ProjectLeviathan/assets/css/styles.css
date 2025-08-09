@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ... (resto de los estilos base, layout, header, etc. sin cambios) ... */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #f5f5fa;
+}
+
+.body-title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.0178571429em;
+    color: #000000;
+}
+
+/* --- Layout Principal --- */
+.page-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    background-color: #f5f5fa;
+}
+
+.general-content {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #00000020;
+}
+
+.general-content-top {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #00000020;
+    z-index: 999;
+}
+
+.general-content-bottom {
+    position: relative;
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* --- Cabecera --- */
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 8px;
+    gap: 8px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.header-left {
+    display: flex;
+    flex: 0 0 auto;
+}
+
+.header-right {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 8px;
+}
+
+.header-item {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 100%;
+    gap: 8px;
+}
+
+.header-button {
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 8px;
+    border: 1px solid #00000020;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+
+/* --- Estilos de Perfil y Rango --- */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.profile-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    user-select: none;
+    box-sizing: border-box;
+    border: 2px solid #ffffff;
+}
+
+/* Fondos por rango */
+.rank-owner .profile-content {
+    background-color: #8b2635;
+}
+
+.rank-admin .profile-content {
+    background-color: #8b2635;
+}
+
+.rank-manager .profile-content {
+    background-color: #1a5e2a;
+}
+
+.rank-moderator .profile-content {
+    background-color: #004080;
+}
+
+.rank-support .profile-content {
+    background-color: #b8860b;
+}
+
+.rank-user .profile-content {
+    background-color: #495057;
+}
+
+/* Decoraciones de borde por rango */
+.rank-owner {
+    background: conic-gradient(from -120deg,
+            #fbbc04 0deg 60deg,
+            #ff6b35 60deg 150deg,
+            #4285f4 150deg 270deg,
+            #34a853 270deg 360deg);
+}
+
+.rank-admin {
+    background: #dc3545;
+}
+
+.rank-manager {
+    background: #28a745;
+}
+
+.rank-moderator {
+    background: #007bff;
+}
+
+.rank-support {
+    background: #ffc107;
+}
+
+.rank-user {
+    background: #6c757d;
+}
+
+
+/* --- Módulos --- */
+.module-content.module-options {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 5px;
+    z-index: 999;
+    width: 320px;
+    height: auto;
+}
+
+.module-options .menu-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 450px;
+    gap: 0;
+    color: #000000;
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    box-shadow: 0 4px 12px #00000020;
+}
+
+/* --- Menú --- */
+.menu-body {
+    flex: 1;
+    padding: 8px;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 4px;
+    user-select: none;
+}
+
+.menu-link {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 40px;
+    color: #000000;
+    position: relative;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.menu-link:hover {
+    background-color: #f5f5fa;
+}
+
+.menu-link-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.menu-link-text {
+    display: block;
+    flex: 1 1 auto;
+    text-align: start;
+    overflow: hidden;
+    align-self: center;
+}
+
+.menu-link-text span {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* --- Estados --- */
+.disabled {
+    display: none;
+}
+
+.active {
+    display: flex;
+}
+
+/* --- Elementos UI Móviles --- */
+.pill-container {
+    display: none;
+    justify-content: center;
+    width: 100%;
+    padding: 8px 0;
+}
+
+.drag-handle {
+    position: relative;
+    display: flex;
+    width: 52px;
+    height: 4px;
+    background-color: #f5f5fa;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/* --- Media Queries --- */
+@media (max-width: 468px) {
+    .module-content.module-options {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        justify-content: center;
+        align-items: flex-end;
+        width: 100%;
+        height: 100%;
+        background-color: #00000080;
+    }
+
+    .module-options .menu-content {
+        border-bottom: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        max-height: 80%;
+
+        /* --- LÓGICA DE ANIMACIÓN CON CLASES --- */
+        transform: translateY(100%);
+        transition: transform 0.3s ease-out;
+    }
+
+    /* La clase .is-open mueve el menú a su posición visible */
+    .module-options .menu-content.is-open {
+        transform: translateY(0);
+    }
+
+    .menu-body {
+        padding-top: 0;
+    }
+
+    .pill-container {
+        display: flex;
+    }
+}
+
+/* --- Clases de Utilidad --- */
+.overflow-y {
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-color: #00000080 transparent;
+    scrollbar-width: thin;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* --- Animaciones de Fundido para el Módulo --- */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.3s ease-out forwards;
+}
